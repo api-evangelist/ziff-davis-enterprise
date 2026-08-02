@@ -1,0 +1,21 @@
+{
+  "repo": "ziff-davis-enterprise",
+  "feeds": [
+    {
+      "source": "https://www.ziffdavis.com/feed",
+      "feed_url": "https://www.ziffdavis.com/feed",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://www.ziffdavis.com",
+      "feed_url": "https://www.ziffdavis.com/feed",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 30,
+  "fetched": "2026-08-01T15:49:00Z"
+}

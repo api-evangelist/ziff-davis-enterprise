@@ -1,9 +1,29 @@
 aid: ziff-davis-enterprise
 name: Ziff Davis Enterprise
-description: Ziff Davis Enterprise is a company surfaced as a portfolio company of insight-partners and
-  added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Ziff Davis (Nasdaq: ZD) is a vertically focused digital media and internet company whose
+  portfolio includes leading brands across technology, entertainment, shopping, health,
+  cybersecurity, and marketing technology. Its brands include PCMag, Mashable, IGN, Lifehacker,
+  RetailMeNot, Spiceworks, Everyday Health, IPVanish, Ookla (Speedtest), FullContact, and
+  iContact, among others. The company operates a portfolio of advertising, subscription, and
+  performance-marketing businesses rather than a single first-party public API product. This
+  API Evangelist profile was surfaced as an Insight Partners portfolio lead; a public web
+  crawl of the corporate site found an active investor-relations, newsroom, brands, privacy,
+  and terms surface but no developer portal, API reference, or published API specification at
+  the corporate (ziffdavis.com) level.
 url: https://raw.githubusercontent.com/api-evangelist/ziff-davis-enterprise/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.ziffdavis.com/wp-content/uploads/2021/09/Ziff-Davis_Blue.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,12 +32,41 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Digital Media
+- Internet
+- Publishing
+- Cybersecurity
+- Marketing Technology
+- Technology
+- Publicly Traded
 apis: []
+common:
+- type: DomainSecurity
+  url: security/ziff-davis-enterprise-domain-security.yml
+- type: Website
+  url: https://www.ziffdavis.com
+- type: Blog
+  url: https://www.ziffdavis.com/about/news
+- type: Support
+  url: https://www.ziffdavis.com/about/contacts
+- type: PrivacyPolicy
+  url: https://www.ziffdavis.com/privacy
+- type: TermsOfService
+  url: https://www.ziffdavis.com/terms
+- type: GitHubOrganization
+  url: https://github.com/ziffdavis
+- type: LinkedIn
+  url: https://www.linkedin.com/company/ziff-davis-inc
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
