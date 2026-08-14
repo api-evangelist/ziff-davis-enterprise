@@ -10,7 +10,15 @@ description: >-
   API Evangelist profile was surfaced as an Insight Partners portfolio lead; a public web
   crawl of the corporate site found an active investor-relations, newsroom, brands, privacy,
   and terms surface but no developer portal, API reference, or published API specification at
-  the corporate (ziffdavis.com) level.
+  the corporate (ziffdavis.com) level. A second enrichment pass on 2026-08-13 ran full
+  contract discovery against www.ziffdavis.com — OpenAPI, Swagger, GraphQL, MCP, llms.txt and
+  every /.well-known/ path returned 404, and the WordPress REST root returned 401 — confirming
+  the absence, while surfacing three real corporate programs: a Bugcrowd-hosted Responsible
+  Vulnerability Disclosure Program, a published data-protection compliance program (Data
+  Privacy Framework self-certification for 32 named group entities, GDPR DPAs, CCPA request
+  metrics, EU DSA statement, NIST SP 800-88 vendor security exhibit), and five first-party
+  PHP packages in the ziffdavis Packagist namespace — none of which is an API client library.
+  Ziff Davis brands with their own API surfaces are profiled as separate entries.
 url: https://raw.githubusercontent.com/api-evangelist/ziff-davis-enterprise/refs/heads/main/apis.yml
 accessModel:
   pricing: unknown
@@ -32,7 +40,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-08-13'
 tags:
 - Company
 - Digital Media
@@ -46,6 +54,18 @@ apis: []
 common:
 - type: DomainSecurity
   url: security/ziff-davis-enterprise-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/ziff-davis-enterprise-vulnerability-disclosure.yml
+- type: Security
+  url: security/ziff-davis-enterprise-vulnerability-disclosure.yml
+- type: Conformance
+  url: conformance/ziff-davis-enterprise-conformance.yml
+- type: Compliance
+  url: conformance/ziff-davis-enterprise-conformance.yml
+- type: Packages
+  url: packages/ziff-davis-enterprise-packages.yml
+- type: LLMsTxt
+  url: llms/ziff-davis-enterprise-llms.txt
 - type: Website
   url: https://www.ziffdavis.com
 - type: Blog
@@ -66,7 +86,30 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 x-enrichment:
-  date: '2026-07-21'
+  date: '2026-08-13'
   status: minimal
-  artifacts_added: 1
+  artifacts_added: 7
   pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Ziff Davis, Inc. is the publicly traded parent of a portfolio of consumer and B2B
+    media brands and ships no API of its own — the corporate WordPress site returns 404
+    for /openapi.json, /graphql, /mcp, /llms.txt and every /.well-known/ path, and its
+    only machine surface, the WordPress REST root at /wp-json/, answers 401 to anonymous
+    callers.
+  evidence:
+  - url: https://www.ziffdavis.com/openapi.json
+    status: 404
+  - url: https://www.ziffdavis.com/graphql
+    status: 404
+  - url: https://www.ziffdavis.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.ziffdavis.com/llms.txt
+    status: 404
+  - url: https://www.ziffdavis.com/wp-json/
+    status: 401
+  - url: https://www.ziffdavis.com/page-sitemap.xml
+    status: 200
+  checked: '2026-08-13'
