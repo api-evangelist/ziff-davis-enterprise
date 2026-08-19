@@ -1,0 +1,111 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://api.github.com/orgs/ziffdavis/repos ;
+  https://packagist.org/packages/list.json?vendor=ziffdavis ;
+  https://repo.packagist.org/p2/ziffdavis/<name>.json
+notes: >-
+  IMPORTANT — none of these is an API client SDK. Ziff Davis, Inc. publishes no API at
+  the corporate level, so there is nothing for a client library to wrap. What the
+  ZiffDavis GitHub organization (17 public repos, verified org, github.com/ZiffDavis)
+  and the `ziffdavis` Packagist vendor namespace actually ship is internal
+  engineering utilities: Laravel/Nova field packages, a OneLogin SSO integration, and
+  a Base62 UUID encoder. They are genuinely first-party (published under the company's
+  own org and vendor namespace), so `official: true` is correct, but NO `SDKs` pointer
+  is emitted in apis.yml — `sdk_count` asks how many client libraries a provider ships
+  for its API, and the honest answer here is zero. Versions and dates are read from the
+  Packagist metadata endpoint. Every one of the five published packages is stale: four
+  last released in 2019–2020, one in 2023.
+packages:
+  - language: php
+    registry: packagist
+    name: ziffdavis/uuid62
+    url: https://packagist.org/packages/ziffdavis/uuid62
+    install: composer require ziffdavis/uuid62
+    source: https://github.com/ZiffDavis/php-uuid62
+    description: Generate Base-62 encoded UUID strings.
+    version: v1.0.3
+    published: '2023-02-27'
+    official: true
+    api_client: false
+  - language: php
+    registry: packagist
+    name: ziffdavis/laravel-onelogin
+    url: https://packagist.org/packages/ziffdavis/laravel-onelogin
+    install: composer require ziffdavis/laravel-onelogin
+    source: https://github.com/ZiffDavis/laravel-onelogin
+    description: Simplified integration of OneLogin for Laravel applications.
+    version: v0.0.7
+    published: '2020-01-30'
+    official: true
+    api_client: false
+    note: >-
+      Wraps OneLogin (a third-party identity provider), not a Ziff Davis API.
+  - language: php
+    registry: packagist
+    name: ziffdavis/nova-multiselect
+    url: https://packagist.org/packages/ziffdavis/nova-multiselect
+    install: composer require ziffdavis/nova-multiselect
+    source: https://github.com/ZiffDavis/nova-multiselect
+    description: A Laravel Nova multiselect field.
+    version: v0.2.1
+    published: '2019-10-25'
+    official: true
+    api_client: false
+  - language: php
+    registry: packagist
+    name: ziffdavis/laravel-eloquent-imagery
+    url: https://packagist.org/packages/ziffdavis/laravel-eloquent-imagery
+    install: composer require ziffdavis/laravel-eloquent-imagery
+    source: https://github.com/ZiffDavis/laravel-eloquent-imagery
+    description: Eloquent image attribute/collection handling for Laravel.
+    version: v0.5.1
+    published: '2019-05-14'
+    official: true
+    api_client: false
+  - language: php
+    registry: packagist
+    name: ziffdavis/nova-nestedset
+    url: https://packagist.org/packages/ziffdavis/nova-nestedset
+    install: composer require ziffdavis/nova-nestedset
+    source: https://github.com/ZiffDavis/nova-nestedset
+    description: A Laravel Nova field for Nestedset.
+    version: v0.0.1
+    published: '2019-02-26'
+    official: true
+    api_client: false
+unpublished_repos:
+  note: >-
+    Public repos in the ZiffDavis org with no reachable registry release. Recorded so a
+    later round does not re-search them.
+  entries:
+    - repo: https://github.com/ZiffDavis/go-uuid62
+      registry: go
+      version: null
+      note: >-
+        proxy.golang.org/github.com/ziffdavis/go-uuid62/@v/list returns HTTP 200 with an
+        empty body — the module has no tagged versions, so there is nothing to pin.
+    - repo: https://github.com/ZiffDavis/jsonapi-scala
+      registry: maven
+      version: null
+      note: No artifact found under a ziffdavis groupId on Maven Central.
+    - repo: https://github.com/ZiffDavis/php-json-schema-faker
+      registry: packagist
+      version: null
+      note: Not present in the ziffdavis Packagist vendor listing.
+    - repo: https://github.com/ZiffDavis/spiceworld_ragtime
+      registry: null
+      version: null
+      note: >-
+        Example code for document parsing and retrieval-augmented generation
+        (Spiceworks event demo). Not packaged.
+registries_searched:
+  - registry: packagist
+    query: 'vendor=ziffdavis'
+    result: 5 packages
+  - registry: npm
+    query: 'text=ziffdavis'
+    result: 0 packages
+  - registry: go
+    query: proxy.golang.org module list for github.com/ziffdavis/go-uuid62
+    result: no tagged versions

@@ -1,0 +1,23 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://www.ziffdavis.com/page-sitemap.xml ; live probes of www.ziffdavis.com
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  Ziff Davis, Inc. publishes no API at the corporate level, so there are no documented
+  rate limits, no quota windows and no runtime rate-limit response headers to record.
+  No X-RateLimit-*, RateLimit-* or Retry-After header was observed on any anonymous
+  response from www.ziffdavis.com during the 2026-08-13 probe pass. The only
+  credential-gated machine surface, the WordPress REST root at /wp-json/, answers HTTP
+  401 before any limit is expressed.
+  This file records an honest zero. NO `RateLimits` pointer is emitted in apis.yml,
+  because a file documenting an absence must not be scored as a presence.
+evidence:
+  - url: https://www.ziffdavis.com/wp-json/
+    status: 401
+    finding: no rate-limit headers; request rejected at authentication
+  - url: https://www.ziffdavis.com/robots.txt
+    status: 200
+    finding: no crawl-delay or agent rate directives

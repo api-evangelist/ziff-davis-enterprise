@@ -1,0 +1,72 @@
+generated: '2026-08-13'
+method: probed
+source: anonymous HTTPS probes of https://www.ziffdavis.com (2026-08-13)
+description: >-
+  Results of probing the /.well-known/ discovery surface on the only host reachable
+  from apis.yml. apis[] is empty — Ziff Davis, Inc. publishes no API at the corporate
+  (ziffdavis.com) level — so the single host probed is the corporate WordPress site.
+  Every /.well-known/ path returns HTTP 404, and the 404 body is the site's standard
+  WordPress "not found" HTML shell (100,811 bytes, byte-identical across every miss),
+  which is how each miss was confirmed as a genuine absence rather than a soft 200.
+  NO WellKnown or SecurityTxt pointer is emitted in apis.yml: nothing was served,
+  and this file records an absence, not a presence.
+hosts:
+  - host: https://www.ziffdavis.com
+    note: >-
+      WordPress (Yoast sitemaps, /wp-content/, /wp-json/). The WordPress REST API
+      root exists but is credential-gated — /wp-json/ and /wp-json/wp/v2 both answer
+      HTTP 401 "Authorization Required" (nginx, 172-byte body), so no route index or
+      schema is readable anonymously. It is an internal CMS surface, not a published
+      API product.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery run in full against the corporate host on 2026-08-13.
+    Every candidate spec location returned the same 404 HTML shell; no OpenAPI,
+    Swagger, GraphQL, MCP or A2A surface exists at ziffdavis.com.
+  probes:
+    - url: https://www.ziffdavis.com/openapi.json
+      status: 404
+    - url: https://www.ziffdavis.com/openapi.yaml
+      status: 404
+    - url: https://www.ziffdavis.com/v1/openapi.json
+      status: 404
+    - url: https://www.ziffdavis.com/swagger.json
+      status: 404
+    - url: https://www.ziffdavis.com/api-docs
+      status: 404
+    - url: https://www.ziffdavis.com/api
+      status: 404
+    - url: https://www.ziffdavis.com/graphql
+      status: 404
+    - url: https://www.ziffdavis.com/mcp
+      status: 404
+    - url: https://www.ziffdavis.com/llms.txt
+      status: 404
+    - url: https://www.ziffdavis.com/wp-json/
+      status: 401
+    - url: https://www.ziffdavis.com/wp-json/wp/v2
+      status: 401
+robots:
+  url: https://www.ziffdavis.com/robots.txt
+  status: 200
+  note: >-
+    Generic WordPress robots.txt. No AI/agent user-agent directives of any kind.
+    Sitemap directive points at https://www.j2global.com/sitemap_index.xml, which
+    serves the ziffdavis.com sitemap index (legacy j2 Global domain, same origin).

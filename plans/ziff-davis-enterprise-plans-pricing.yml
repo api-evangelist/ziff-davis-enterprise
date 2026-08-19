@@ -1,0 +1,24 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://www.ziffdavis.com/page-sitemap.xml ; https://www.ziffdavis.com/ ;
+  https://www.ziffdavis.com/brands
+plan_count: 0
+plans: []
+note: >-
+  Ziff Davis, Inc. publishes no API and therefore no API plans or pricing at the
+  corporate level. The full corporate page sitemap (33 pages) was read on 2026-08-13
+  and contains no pricing, plans, rates or developer-tier page of any kind — it is an
+  investor-relations, brands, ESG, careers and legal-policy surface. Ziff Davis' revenue
+  is advertising, subscription and performance-marketing sold at the individual brand
+  level (each brand is profiled separately in the API Evangelist network), not a
+  metered developer product.
+  This file records an honest zero. NO `Plans` or `Pricing` pointer is emitted in
+  apis.yml, because a file documenting an absence must not be scored as a presence.
+evidence:
+  - url: https://www.ziffdavis.com/page-sitemap.xml
+    status: 200
+    finding: 33 pages, no pricing or plans page
+  - url: https://www.ziffdavis.com/api
+    status: 404
+    finding: no developer product to price

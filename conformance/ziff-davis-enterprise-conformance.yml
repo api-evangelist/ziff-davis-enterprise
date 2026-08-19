@@ -1,0 +1,143 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://www.ziffdavis.com/esg-security ;
+  https://www.ziffdavis.com/general/data-privacy ;
+  https://www.ziffdavis.com/ziff-davis-inc-entities-self-certified-under-the-data-privacy-framework-dpf ;
+  https://www.ziffdavis.com/technical-and-organizational-security-measures ;
+  https://www.ziffdavis.com/regulatory-information
+notes: >-
+  Ziff Davis, Inc. publishes no API at the corporate level, so there is no OpenAPI,
+  AsyncAPI or GraphQL contract from which API-standard conformance could be derived —
+  every API-technical standard below is recorded as not-applicable rather than
+  false-because-unmet. What Ziff Davis DOES publish, and what this artifact captures,
+  is a corporate data-protection and regulatory compliance program with named,
+  verifiable regimes. Because that program is published with named frameworks and a
+  named certification, a `Compliance` pointer is emitted in apis.yml alongside
+  `Conformance`. No SOC 2, ISO 27001, PCI DSS or HIPAA attestation report is
+  published, and none is claimed here.
+standards:
+  - id: eu-us-data-privacy-framework
+    conforms: true
+    evidence: >-
+      Ziff Davis publishes a named list of 32 self-certified group entities under the
+      Data Privacy Framework (DPF) — including Ookla LLC, IGN Entertainment, Everyday
+      Health, RetailMeNot, Mashable, Humble Bundle, BabyCenter, SpiceWorks, IPVanish,
+      SEO Moz and Ziff Davis Lifestyle — at
+      https://www.ziffdavis.com/ziff-davis-inc-entities-self-certified-under-the-data-privacy-framework-dpf
+  - id: gdpr
+    conforms: true
+    evidence: >-
+      Published controller-processor, controller-controller and NDA-GDPR data
+      processing agreements (/dpa, /controller-processor-dpa, /nda-gdpr-dpa), a stated
+      "privacy by default / privacy by design" posture with privacy impact assessments
+      before launch, and mandatory GDPR employee training (/esg-security).
+  - id: ccpa-cpra
+    conforms: true
+    evidence: >-
+      Published California consumer rights request metrics for 1 Jan – 31 Dec 2025
+      (145 Know, 16,580 Opt out of Sale, 6,469 Deletion, 19 Correct, 99 Limit
+      Processing, with average days to complete) at /regulatory-information, plus a
+      privacy rights request intake at /privacy-rights-request.
+  - id: eu-digital-services-act
+    conforms: true
+    evidence: >-
+      /regulatory-information carries a DSA statement confirming average monthly active
+      recipients in the EU are below the 45 million VLOP threshold.
+  - id: nist-sp-800-88-media-sanitization
+    conforms: true
+    evidence: >-
+      The Technical and Organizational Security Measures vendor exhibit requires media
+      sanitization to conform to NIST SP 800-88 or a successor standard (section 2.3).
+  - id: pci-dss
+    conforms: partial
+    evidence: >-
+      PCI is named only as a subject of mandatory employee security/privacy training on
+      /esg-security. No PCI DSS Attestation of Compliance or merchant/service-provider
+      level is published at the corporate level.
+  - id: soc2
+    conforms: false
+    evidence: No SOC 2 report, bridge letter or trust-center portal is published.
+  - id: iso-27001
+    conforms: false
+    evidence: >-
+      Not claimed. The vendor Security Exhibit requires vendors to run a written
+      information security program "based on best practice standards for their
+      industry" without naming ISO 27001.
+  - id: hipaa
+    conforms: false
+    evidence: Not claimed at the corporate level.
+  - id: fedramp
+    conforms: false
+    evidence: Not claimed.
+  - id: openapi
+    conforms: not-applicable
+    evidence: No OpenAPI is published at ziffdavis.com (see well-known/ probe log).
+  - id: asyncapi
+    conforms: not-applicable
+    evidence: No event or webhook surface is published.
+  - id: oauth2
+    conforms: not-applicable
+    evidence: >-
+      /.well-known/oauth-authorization-server and /.well-known/oauth-protected-resource
+      both 404. No public authorization server.
+  - id: oidc
+    conforms: not-applicable
+    evidence: /.well-known/openid-configuration returns 404.
+  - id: rfc9457-problem-details
+    conforms: not-applicable
+    evidence: No API contract exists to carry an error envelope.
+  - id: rfc8594-sunset-header
+    conforms: not-applicable
+  - id: idempotency
+    conforms: not-applicable
+  - id: json-api
+    conforms: not-applicable
+  - id: scim
+    conforms: not-applicable
+  - id: fhir
+    conforms: not-applicable
+  - id: fapi
+    conforms: not-applicable
+compliance_program:
+  published: true
+  hub: https://www.ziffdavis.com/esg-security
+  documents:
+    - title: Data Privacy & Security (corporate ESG)
+      url: https://www.ziffdavis.com/esg-security
+      format: html
+      status: 200
+    - title: Data Privacy
+      url: https://www.ziffdavis.com/general/data-privacy
+      format: html
+      status: 200
+    - title: Information & Data Security Practices
+      url: https://www.ziffdavis.com/ziff-davis-information-data-security-practices
+      format: pdf
+      status: 200
+    - title: Technical and Organizational Security Measures (vendor security exhibit)
+      url: https://www.ziffdavis.com/technical-and-organizational-security-measures
+      format: html
+      status: 200
+    - title: Entities Self-Certified Under the Data Privacy Framework (DPF)
+      url: https://www.ziffdavis.com/ziff-davis-inc-entities-self-certified-under-the-data-privacy-framework-dpf
+      format: html
+      status: 200
+    - title: Regulatory Information (CCPA metrics, EU DSA statement)
+      url: https://www.ziffdavis.com/regulatory-information
+      format: html
+      status: 200
+    - title: Responsible AI Principles
+      url: https://www.ziffdavis.com/ziff-davis-responsible-ai-principles
+      format: pdf
+      status: 200
+    - title: Governance (whistleblower, board, supplier standards)
+      url: https://www.ziffdavis.com/esg-governance
+      format: html
+      status: 200
+  audit_function: >-
+    Corporate Audit Services (CAS) reports to the Audit Committee of the Board and
+    provides independent assessments of governance, risk management and control
+    processes.
+  third_party_certifications: []
+  attestation_reports_published: false
