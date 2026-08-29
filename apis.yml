@@ -20,6 +20,17 @@ description: >-
   PHP packages in the ziffdavis Packagist namespace — none of which is an API client library.
   Ziff Davis brands with their own API surfaces are profiled as separate entries.
 url: https://raw.githubusercontent.com/api-evangelist/ziff-davis-enterprise/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
