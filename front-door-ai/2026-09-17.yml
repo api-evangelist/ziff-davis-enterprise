@@ -1,0 +1,26 @@
+# Front Door AI Index — ziff-davis-enterprise — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: ziff-davis-enterprise
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.ziffdavis.com
+  final_host: www.ziffdavis.com
+  ownership: own
+  owner: ziff-davis-enterprise
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 3
+  host_score: 3
+  density: 6.38
+  words: 470
+  tiers:
+    agentic: 0
+    core: 2
+    model: 1
+  ambiguous: 0
+  top_terms:
+    AI: 2
+    OpenAI: 1
