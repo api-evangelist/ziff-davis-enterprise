@@ -63,6 +63,10 @@ tags:
 - Publicly Traded
 apis: []
 common:
+- type: Plans
+  url: plans/ziff-davis-enterprise-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/ziff-davis-enterprise-rate-limits.yml
 - type: DomainSecurity
   url: security/ziff-davis-enterprise-domain-security.yml
 - type: VulnerabilityDisclosure
